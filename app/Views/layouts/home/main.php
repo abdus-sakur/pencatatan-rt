@@ -12,17 +12,14 @@
     <script src="<?= base_url('public/assets/plugins/jquery/jquery.min.js'); ?>"></script>
 </head>
 
-<body>
-    <div class="container mt-5">
-        <div class="d-flex justify-content-center">
-            <div class="col-md-8 col-12">
-                <?= $this->include('components/alert'); ?>
-                <?= $this->renderSection('home-content'); ?>
-                <?= $this->include('layouts/footer'); ?>
-            </div>
+<body class="d-flex flex-column min-vh-100 min-vw-100">
+    <div class="d-flex flex-grow-1 justify-content-center align-items-center">
+        <div class="container">
+            <?= $this->include('components/alert'); ?>
+            <?= $this->renderSection('home-content'); ?>
+            <?= $this->include('layouts/footer'); ?>
         </div>
     </div>
-
     <script src="<?= base_url("public/assets/js/bootstrap.js"); ?>"></script>
 </body>
 

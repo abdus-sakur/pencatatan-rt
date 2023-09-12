@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="<?= base_url("assets/css/main/app.css"); ?>">
-    <link rel="stylesheet" href="<?= base_url("assets/css/pages/auth.css"); ?>">
-    <link rel="shortcut icon" href="<?= base_url("assets/images/logo/favicon.svg"); ?>" type="image/x-icon">
-    <link rel="shortcut icon" href="<?= base_url("assets/images/logo/favicon.png"); ?>" type="image/png">
+    <link rel="stylesheet" href="<?= base_url("public/assets/css/main/app.css"); ?>">
+    <link rel="stylesheet" href="<?= base_url("public/assets/css/pages/auth.css"); ?>">
+    <link rel="shortcut icon" href="<?= base_url("public/assets/images/logo/favicon.svg"); ?>" type="image/x-icon">
+    <link rel="shortcut icon" href="<?= base_url("public/assets/images/logo/favicon.png"); ?>" type="image/png">
 </head>
 
 <body>
@@ -17,8 +17,8 @@
         <div class="row h-100">
             <div class="col-lg-5 col-12">
                 <div id="auth-left">
-                    <div class="auth-logo">
-                        <img src="<?= base_url("assets/images/logo/logo.svg"); ?>" alt="Logo">
+                    <div class="logo">
+                        <img src="<?= base_url('public/assets/images/logo/logo.png'); ?>" height="125px" alt="">
                     </div>
                     <?= $this->include('components/alert'); ?>
                     <h1 class="auth-title">Log in</h1>
@@ -56,7 +56,7 @@
         </div>
 
     </div>
-    <script src="<?= base_url("assets/js/bootstrap.js"); ?>"></script>
+    <script src="<?= base_url("public/assets/js/bootstrap.js"); ?>"></script>
 </body>
 
 </html>

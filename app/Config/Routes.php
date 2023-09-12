@@ -15,12 +15,14 @@ $routes->set404Override();
 
 $routes->get('login', 'UserController::login');
 $routes->post('login', 'UserController::verifyUser');
-$routes->get('/', 'DashboardController::index');
+$routes->get('/', 'HomeController::index');
 
 $routes->group('', ['filter' => 'isLogin'], static function ($routes) {
     $routes->get('logout', 'UserController::logout');
     // Dashboard
     $routes->get('dashboard', 'DashboardController::index');
+    $routes->post('dashboard/import-excel', 'DashboardController::importExcel');
+    $routes->post('dashboard/simpan-keterangan', 'DashboardController::saveKeterangan');
     // ----------------------- SETTING ------------------------------
     //user setting
     $routes->get('user-setting', 'UserController::userIndex');

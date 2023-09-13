@@ -19,7 +19,7 @@
 
         <?php if ($data) : ?>
             <div class="table-responsive mt-3">
-                <div class="text-end">Bulan: <?= date('F Y'); ?></div>
+                <div class="text-end">Bulan : <?= date('F Y'); ?></div>
                 <table class="table table-bordered">
                     <thead>
                         <tr>

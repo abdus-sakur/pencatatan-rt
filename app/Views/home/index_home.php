@@ -19,6 +19,7 @@
 
         <?php if ($data) : ?>
             <div class="table-responsive mt-3">
+                <div class="text-end">Bulan: <?= date('F Y'); ?></div>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
@@ -28,6 +29,7 @@
                             <th>Agustusan</th>
                             <th>Sosial Besuk</th>
                             <th>Arisan</th>
+                            <th>Total</th>
                             <th>Keterangan</th>
                         </tr>
                     </thead>
@@ -39,6 +41,7 @@
                             <td><?= rupiah($data->agustusan); ?></td>
                             <td><?= rupiah($data->sosial_besuk); ?></td>
                             <td><?= rupiah($data->arisan); ?></td>
+                            <td><?= rupiah($data->iuran_wajib + $data->agustusan + $data->sosial_besuk + $data->arisan); ?></td>
                             <td><?= $data->keterangan; ?></td>
                         </tr>
                     </tbody>

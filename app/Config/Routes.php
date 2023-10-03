@@ -23,6 +23,14 @@ $routes->group('', ['filter' => 'isLogin'], static function ($routes) {
     $routes->get('dashboard', 'DashboardController::index');
     $routes->post('dashboard/import-excel', 'DashboardController::importExcel');
     $routes->post('dashboard/simpan-keterangan', 'DashboardController::saveKeterangan');
+    // iuran kas
+    $routes->get('iuran-kas', 'IuranController::iuranKas');
+    $routes->get('download-format-excel/iuran-kas', 'IuranController::sampleImportIuranKas');
+    $routes->post('iuran-kas/import-excel', 'IuranController::importExcelIuranKas');
+    // iuran event
+    $routes->get('iuran-event', 'IuranController::iuranEvent');
+    $routes->get('download-format-excel/iuran-event', 'IuranController::sampleImportIuranEvent');
+    $routes->post('iuran-event/import-excel', 'IuranController::importExcelIuranEvent');
     // ----------------------- SETTING ------------------------------
     //user setting
     $routes->get('user-setting', 'UserController::userIndex');
@@ -30,16 +38,16 @@ $routes->group('', ['filter' => 'isLogin'], static function ($routes) {
     $routes->delete('user-setting/delete-user', 'UserController::deleteUser');
     $routes->post('user-setting/store-role', 'UserController::storeRole');
     $routes->delete('user-setting/delete-role', 'UserController::deleteRole');
-    // menu setting 
-    $routes->get('menu-setting', 'MenuController::index');
-    $routes->post('menu-setting/store-menu', 'MenuController::storeMenu');
-    $routes->delete('menu-setting/delete-menu', 'MenuController::deleteMenu');
-    $routes->post('menu-setting/store-menu-category', 'MenuController::storeMenuCategory');
-    $routes->delete('menu-setting/delete-menu-category', 'MenuController::deleteMenuCategory');
-    // sub menu 
-    $routes->get('submenu-setting', 'MenuController::indexSubMenu');
-    $routes->post('submenu-setting/store-submenu', 'MenuController::storeSubMenu');
-    $routes->delete('submenu-setting/delete-submenu', 'MenuController::deleteSubMenu');
+    // // menu setting 
+    // $routes->get('menu-setting', 'MenuController::index');
+    // $routes->post('menu-setting/store-menu', 'MenuController::storeMenu');
+    // $routes->delete('menu-setting/delete-menu', 'MenuController::deleteMenu');
+    // $routes->post('menu-setting/store-menu-category', 'MenuController::storeMenuCategory');
+    // $routes->delete('menu-setting/delete-menu-category', 'MenuController::deleteMenuCategory');
+    // // sub menu 
+    // $routes->get('submenu-setting', 'MenuController::indexSubMenu');
+    // $routes->post('submenu-setting/store-submenu', 'MenuController::storeSubMenu');
+    // $routes->delete('submenu-setting/delete-submenu', 'MenuController::deleteSubMenu');
 });
 
 

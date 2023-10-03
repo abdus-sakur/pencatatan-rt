@@ -3,12 +3,12 @@
 <div class="card">
     <div class="card-body">
         <div class="d-flex justify-content-between">
-            <div>
+            <form action="">
                 <div class="input-group">
                     <input type="month" class="form-control" name="bulan" id="bulan" value="<?= $bulan; ?>">
-                    <button class="btn btn-outline-primary" type="button">Submit</button>
+                    <button class="btn btn-outline-primary" type="submit">Submit</button>
                 </div>
-            </div>
+            </form>
             <button type="button" class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 Import Excel
             </button>

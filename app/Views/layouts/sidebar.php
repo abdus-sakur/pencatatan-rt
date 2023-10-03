@@ -8,33 +8,25 @@
                 <span>Dashboard</span>
             </a>
         </li>
+        <li class="sidebar-item <?= activeMenu('iuran-kas'); ?>">
+            <a href="<?= base_url("iuran-kas"); ?>" class='sidebar-link'>
+                <i class="bi bi-file-earmark-text-fill"></i>
+                <span>Iuran Kas</span>
+            </a>
+        </li>
+        <li class="sidebar-item <?= activeMenu('iuran-event'); ?>">
+            <a href="<?= base_url("iuran-event"); ?>" class='sidebar-link'>
+                <i class="bi bi-file-earmark-binary-fill"></i>
+                <span>Iuran Event</span>
+            </a>
+        </li>
 
         <li class="sidebar-title">Setting</li>
         <li class="sidebar-item">
             <a href="<?= base_url("user-setting"); ?>" class='sidebar-link'>
-                <i class="bi bi-grid-fill"></i>
+                <i class="bi bi-people-fill"></i>
                 <span>User</span>
             </a>
-        </li>
-        <li class="sidebar-item  has-sub">
-            <a href="#" class='sidebar-link'>
-                <i class="bi bi-stack"></i>
-                <span>Menu</span>
-            </a>
-            <ul class="submenu">
-                <li class="submenu-item ">
-                    <a href="<?= base_url('menu-setting'); ?>" class="sidebar-link">
-                        <i class="bi bi-circle-fill"></i>
-                        <span>Menu</span>
-                    </a>
-                </li>
-                <li class="submenu-item ">
-                    <a href="<?= base_url('submenu-setting'); ?>" class="sidebar-link">
-                        <i class="bi bi-circle-fill"></i>
-                        <span>Sub Menu</span>
-                    </a>
-                </li>
-            </ul>
         </li>
     </ul>
 </div>

@@ -15,6 +15,7 @@
 <body class="d-flex flex-column min-vh-100 min-vw-100">
     <div class="d-flex flex-grow-1 justify-content-center align-items-center">
         <div class="container">
+            <?= $this->include('layouts/home/_header'); ?>
             <?= $this->include('components/alert'); ?>
             <?= $this->renderSection('home-content'); ?>
             <?= $this->include('layouts/footer'); ?>

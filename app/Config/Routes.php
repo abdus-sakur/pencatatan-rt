@@ -16,6 +16,8 @@ $routes->set404Override();
 $routes->get('login', 'UserController::login');
 $routes->post('login', 'UserController::verifyUser');
 $routes->get('/', 'HomeController::index');
+$routes->get('laporan-iuran-kas', 'HomeController::iuranKas');
+$routes->get('laporan-iuran-kegiatan', 'HomeController::iuranEvent');
 
 $routes->group('', ['filter' => 'isLogin'], static function ($routes) {
     $routes->get('logout', 'UserController::logout');

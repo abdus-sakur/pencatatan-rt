@@ -1,5 +1,5 @@
-<?= $this->extend('layouts/templates'); ?>
-<?= $this->section('content'); ?>
+<?= $this->extend('layouts/home/main'); ?>
+<?= $this->section('home-content'); ?>
 <div class="card">
     <div class="card-body">
         <div class="d-flex justify-content-between align-items-center">
@@ -13,9 +13,6 @@
                     <button class="btn btn-outline-primary" type="submit">Submit</button>
                 </div>
             </form>
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#importExcel">
-                Import Excel
-            </button>
         </div>
         <?php if ($pemasukan['data']) : ?>
             <h5 class="my-3"><?= $pemasukan['data'][0]['nama_event']; ?></h5>
@@ -65,31 +62,6 @@
                 </table>
             </div>
         <?php endif; ?>
-    </div>
-</div>
-<!-- Modal import-->
-<div class="modal fade" id="importExcel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="importExcelLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="importExcelLabel">import excel</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <a href="<?= base_url('download-format-excel/iuran-event'); ?>" class="d-block mb-4">Download Contoh Format Import Excel</a>
-                <form action="<?= base_url('iuran-event/import-excel'); ?>" enctype="multipart/form-data" method="post">
-                    <div class="form-group row">
-                        <label for="" class="col-md-4">File Excel</label>
-                        <div class="col-md-8">
-                            <input type="file" name="excel" id="" required>
-                        </div>
-                    </div>
-                    <div class="text-end">
-                        <button class="btn btn-primary">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </div>
     </div>
 </div>
 <?= $this->endSection(); ?>

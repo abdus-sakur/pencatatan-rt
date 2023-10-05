@@ -89,7 +89,7 @@ class IuranController extends BaseController
 
     public function iuranEvent()
     {
-        $input_event = $this->request->getGet('event') ?? 1;
+        $input_event = $this->request->getGet('event') ?? 2;
         $events     = $this->db->table('event')->get()->getResult();
         return view('iuran/index_iuran_event', [
             'title' => "Iuran Event",
@@ -101,7 +101,7 @@ class IuranController extends BaseController
     }
     public function sampleImportIuranEvent()
     {
-        return $this->response->download(getcwd() . "/public/assets/format-import-excel/format-import-excel-iuran-kas.xlsx", null);
+        return $this->response->download(getcwd() . "/public/assets/format-import-excel/format-import-iuran-event.xlsx", null);
     }
     public function importExcelIuranEvent()
     {

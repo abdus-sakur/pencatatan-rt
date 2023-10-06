@@ -11,7 +11,7 @@
                 <form action="">
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" name="keyword" value="<?= $keyword; ?>" placeholder="Masukkan Nama">
-                        <span class="input-group-text"><i class="bi bi-search"></i></span>
+                        <button class="input-group-text" type="submit"><i class="bi bi-search"></i></button>
                     </div>
                 </form>
             </div>
@@ -19,7 +19,7 @@
 
         <?php if ($data) : ?>
             <div class="table-responsive mt-3">
-                <div class="text-end">Bulan : <?= date('F Y'); ?></div>
+                <div class="text-end">Bulan : <?= getMonthName($data->bulan); ?></div>
                 <table class="table table-bordered">
                     <thead>
                         <tr>

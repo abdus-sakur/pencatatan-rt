@@ -16,7 +16,7 @@ class HomeController extends BaseController
     {
         $keyword = $this->request->getVar('keyword') ?? '';
         $data = null;
-        if ($keyword) $data = $this->db->table('iuran')->like('nama', $keyword)->getWhere(['bulan' => date('Y-m')])->getRow();
+        if ($keyword) $data = $this->db->table('iuran')->like('nama', $keyword)->orderBy('bulan', 'desc')->get()->getRow();
         return view('home/index_home', [
             'title' => "Pencatatan RT",
             'data'  => $data,
